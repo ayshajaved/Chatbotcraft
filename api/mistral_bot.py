@@ -7,6 +7,7 @@ class MistralBot:
     def __init__(self):
         load_dotenv() #laoding the .env file variables
         api_key = os.getenv("Mistral_API_KEY")
+        print(api_key) #for debugging
         if not api_key:
             raise ValueError("Mistral_API_KEY not found in environment variables.")
         self.client = Mistral(api_key=api_key) #initializing the client of mistral
