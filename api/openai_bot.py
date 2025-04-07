@@ -21,7 +21,7 @@ class OpenaiBot:
                 max_tokens=150,
                 temperature=0.7 #0 = strict, 1 = creative
            )
-            return response
+            return response.choices[0].message.content.strip() 
         except Exception as e:
             print("Error: ", e)
         
